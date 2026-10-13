@@ -3,6 +3,18 @@
 ## Unreleased
 <!-- Add all new changes here. They will be moved under a version at release -->
 
+## 3.19.2
+`2026-10-13`
+* `NEW` Setting `Lua.completion.requireFunction` to choose what the auto-require completion inserts (e.g. `import` instead of `require`)
+* `FIX` Support 6-digit hex color codes (with and without `#`) in `textDocument/documentColor`, and correct the `alpha` of `#RRGGBB` colors to the LSP range `0..1`
+* `FIX` Resolve unbound class generic parameters to `any` instead of leaving the parameter as the field type [#3442](https://github.com/LuaLS/lua-language-server/pull/3442)
+* `FIX` LuaJIT nil-coalescing `??` now strips the optional `?` from the left-hand type (e.g. `integer? ?? 2` infers `integer`) [#3459](https://github.com/LuaLS/lua-language-server/issues/3459)
+* `FIX` Literal string `"async"` in LuaDoc types (e.g. `---@field mode "async" | "sync"`) is no longer mis-parsed as the `async fun` prefix [#3402](https://github.com/LuaLS/lua-language-server/issues/3402)
+* `FIX` A `.gitignore` line containing only whitespace no longer ignores the entire workspace [#3458](https://github.com/LuaLS/lua-language-server/issues/3458)
+* `FIX` `need-check-nil` diagnostic is no longer reported on safe navigation access (e.g. `x?.field`, `f?.()`, `t?.[key]`), since the optional access itself already handles the nil check. Note that a non-safe access chained after a safe one (e.g. `x.upper()?.field`) still reports, because the safe access only protects its own result.
+* `FIX` Prevent hover and enum completion responses from containing invalid UTF-8 when escaped string literals decode to arbitrary bytes (e.g. `"\xC2"`).
+* `FIX` Fields accessed on a value typed as a constrained generic (e.g. `---@generic T: SomeClass` with `---@param self T`) are now looked up on the constraint, so existing fields no longer report `undefined-field` (unknown fields still do) [#2640](https://github.com/LuaLS/lua-language-server/discussions/2640)
+
 ## 3.19.1
 `2026-08-14`
 * `NEW` LuaJIT 3.0 extension syntax can now also be enabled individually via `Lua.runtime.nonstandardSymbol` (`?.`, `??`, `ternary`, `~>>`, `~>>=`, `..=`, `~=`, `const`, `->`, `number_underscore`), independent of `Lua.runtime.version` and without the `Lua.runtime.enableLuaJITExtensions` master switch. Note that `~=` enables the bitwise-xor compound assignment only in statement context (e.g. `a ~= b` on its own line).

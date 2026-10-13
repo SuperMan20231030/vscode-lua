@@ -74,6 +74,9 @@
                 "postfix": {
                     "$ref": "#/properties/completion.postfix"
                 },
+                "requireFunction": {
+                    "$ref": "#/properties/completion.requireFunction"
+                },
                 "requireSeparator": {
                     "$ref": "#/properties/completion.requireSeparator"
                 },
@@ -147,6 +150,12 @@
         "completion.postfix": {
             "default": "@",
             "markdownDescription": "The symbol used to trigger the postfix suggestion.",
+            "scope": "resource",
+            "type": "string"
+        },
+        "completion.requireFunction": {
+            "default": "require",
+            "markdownDescription": "The function to insert when an auto-require is triggered.",
             "scope": "resource",
             "type": "string"
         },

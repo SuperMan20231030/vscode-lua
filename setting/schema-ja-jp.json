@@ -74,6 +74,9 @@
                 "postfix": {
                     "$ref": "#/properties/completion.postfix"
                 },
+                "requireFunction": {
+                    "$ref": "#/properties/completion.requireFunction"
+                },
                 "requireSeparator": {
                     "$ref": "#/properties/completion.requireSeparator"
                 },
@@ -147,6 +150,12 @@
         "completion.postfix": {
             "default": "@",
             "markdownDescription": "後置提案をトリガーするために使用されるシンボル。",
+            "scope": "resource",
+            "type": "string"
+        },
+        "completion.requireFunction": {
+            "default": "require",
+            "markdownDescription": "自動`require`時に挿入される関数。",
             "scope": "resource",
             "type": "string"
         },

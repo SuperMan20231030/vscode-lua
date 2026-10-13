@@ -74,6 +74,9 @@
                 "postfix": {
                     "$ref": "#/properties/completion.postfix"
                 },
+                "requireFunction": {
+                    "$ref": "#/properties/completion.requireFunction"
+                },
                 "requireSeparator": {
                     "$ref": "#/properties/completion.requireSeparator"
                 },
@@ -147,6 +150,12 @@
         "completion.postfix": {
             "default": "@",
             "markdownDescription": "用於觸發後綴建議的符號。",
+            "scope": "resource",
+            "type": "string"
+        },
+        "completion.requireFunction": {
+            "default": "require",
+            "markdownDescription": "觸發自動 `require` 時插入的函式名稱。",
             "scope": "resource",
             "type": "string"
         },

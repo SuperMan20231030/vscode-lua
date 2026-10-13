@@ -142,6 +142,12 @@
 					"scope": "resource",
 					"type": "string"
 				},
+				"Lua.completion.requireFunction": {
+					"default": "require",
+					"markdownDescription": "%config.completion.requireFunction%",
+					"scope": "resource",
+					"type": "string"
+				},
 				"Lua.completion.requireSeparator": {
 					"default": ".",
 					"markdownDescription": "%config.completion.requireSeparator%",
@@ -3676,5 +3682,5 @@
 	"sponsor": {
 		"url": "https://github.com/LuaLS/lua-language-server/issues/484"
 	},
-	"version": "3.19.1"
+	"version": "3.19.2"
 }

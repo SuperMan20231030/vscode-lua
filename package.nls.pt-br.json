@@ -26,6 +26,7 @@
     "config.completion.keywordSnippet.Replace": "Mostra apenas o `trecho de sintaxe`.",
     "config.completion.maxSuggestCount": "Número máximo de campos analisados para autocompletar. Se um objeto tiver mais campos que esse limite, serão necessárias entradas mais específicas para que as sugestões apareçam.",
     "config.completion.postfix": "Símbolo usado para acionar sugestões de pós-fixo.",
+    "config.completion.requireFunction": "A função inserida quando o auto-require é acionado.",
     "config.completion.requireSeparator": "Separador usado em `require`.",
     "config.completion.showParams": "Mostrar parâmetros na lista de conclusão. Se a função tiver várias definições, elas serão exibidas separadamente.",
     "config.completion.showWord": "Mostrar palavras de contexto nas sugestões.",
