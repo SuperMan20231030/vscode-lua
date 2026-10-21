@@ -3038,12 +3038,9 @@
                 15,
                 20
             ],
-            "items": {
-                "type": "integer"
-            },
             "markdownDescription": "nothing to say",
             "scope": "resource",
-            "type": "array"
+            "type": "integer"
         },
         "nameStyle": {
             "properties": {

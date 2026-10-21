@@ -2876,12 +2876,9 @@
 						15,
 						20
 					],
-					"items": {
-						"type": "integer"
-					},
 					"markdownDescription": "%config.misc.startQueue%",
 					"scope": "resource",
-					"type": "array"
+					"type": "integer"
 				},
 				"Lua.nameStyle.config": {
 					"additionalProperties": false,

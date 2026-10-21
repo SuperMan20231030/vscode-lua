@@ -3038,12 +3038,9 @@
                 15,
                 20
             ],
-            "items": {
-                "type": "integer"
-            },
             "markdownDescription": "VSCode中多个窗口同时启动LSP时的间隔（秒），单个窗口不受影响。",
             "scope": "resource",
-            "type": "array"
+            "type": "integer"
         },
         "nameStyle": {
             "properties": {
