@@ -8,4 +8,4 @@ luamake.exe
 main.lua
 /package/
 /.vscode/
-/package*
+package*
