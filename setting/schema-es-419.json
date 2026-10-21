@@ -3003,6 +3003,9 @@
                 },
                 "parameters": {
                     "$ref": "#/properties/misc.parameters"
+                },
+                "startQueue": {
+                    "$ref": "#/properties/misc.startQueue"
                 }
             }
         },
@@ -3018,6 +3021,27 @@
                 "type": "string"
             },
             "markdownDescription": "[Parámetros de la línea de comando](https://github.com/LuaLS/lua-telemetry-server/tree/master/method) para iniciar el servidor de lenguage en VSCode.",
+            "scope": "resource",
+            "type": "array"
+        },
+        "misc.startQueue": {
+            "default": 0,
+            "enum": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                10,
+                15,
+                20
+            ],
+            "items": {
+                "type": "integer"
+            },
+            "markdownDescription": "nothing to say",
             "scope": "resource",
             "type": "array"
         },
